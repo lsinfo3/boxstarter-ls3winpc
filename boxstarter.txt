@@ -1,10 +1,1 @@
-Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions -EnableShowFullPathInTitleBar
-Enable-RemoteDesktop
-Install-WindowsUpdate -AcceptEula
-
-cinstm fiddler4
-cinstm git-credential-winstore
-cinstm console-devel
-cinstm sublimetext2
-cinstm dotpeek
-cinstm bitkinex
+cinstm googlechrome
