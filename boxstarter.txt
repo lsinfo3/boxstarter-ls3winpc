@@ -6,6 +6,5 @@ cinstm fiddler4
 cinstm git-credential-winstore
 cinstm console-devel
 cinstm sublimetext2
-cinstm poshgit
 cinstm dotpeek
 cinstm bitkinex
