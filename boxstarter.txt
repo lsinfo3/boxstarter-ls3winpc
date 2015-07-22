@@ -1,5 +1,6 @@
 Set-ExplorerOptions -showHidenFilesFoldersDrives -showProtectedOSFiles -showFileExtensions
 Enable-RemoteDesktop
+Install-WindowsUpdate -AcceptEula
 
 cinstm fiddler4
 cinstm git-credential-winstore
