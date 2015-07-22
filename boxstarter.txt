@@ -1,0 +1,9 @@
+Set-ExplorerOptions -showHidenFilesFoldersDrives -showProtectedOSFiles -showFileExtensions
+Enable-RemoteDesktop
+
+cinstm fiddler4
+cinstm git-credential-winstore
+cinstm console-devel
+cinstm sublimetext2
+cinstm poshgit
+cinstm dotpeek
