@@ -1,1 +1,1 @@
-cinstm googlechrome
+cinst googlechrome
