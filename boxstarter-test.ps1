@@ -1,12 +1,29 @@
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions -EnableShowFullPathInTitleBar
 Enable-RemoteDesktop		
 Install-WindowsUpdate -AcceptEula		
+Update-ExecutionPolicy Unrestricted
 
-cinst bitkinex
-cinst notepadplusplus.install
+cinst 7zip
+cinst 7zip.install
 cinst adobereader
-cinst googlechrome
+cinst bitkinex
 cinst chocolatey
+cinst curl
+cinst DotNet4.5.1
+cinst git
+cinst git.install
+cinst git-credential-winstore
+cinst googlechrome
+cinst notepadplusplus.install
+cinst NuGet.CommandLine
+cinst paint.net
+cinst PDFCreator
+cinst poshgit
+cinst skype
+cinst sysinternals
+cinst vlc
+cinst Wget
+
 
 # create HWP user
 $Computername = $env:COMPUTERNAME
