@@ -1,4 +1,5 @@
-Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions -EnableShowFullPathInTitleBar
+Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowFileExtensions -EnableShowFullPathInTitleBar
+Set-StartScreenOptions -EnableBootToDesktop -EnableDesktopBackgroundOnStart -EnableShowStartOnActiveScreen -EnableShowAppsViewOnStartScreen -EnableSearchEverywhereInAppsView -EnableListDesktopAppsFirst
 Enable-RemoteDesktop		
 Install-WindowsUpdate -AcceptEula		
 Update-ExecutionPolicy Unrestricted
@@ -9,12 +10,14 @@ cinst adobereader
 cinst bitkinex
 cinst chocolatey
 cinst curl
-cinst DotNet4.5.1
+cinst dotnet4.5
+cinst firefox
 cinst git
 cinst git.install
 cinst git-credential-winstore
 cinst googlechrome
 cinst notepadplusplus.install
+cinst notepad2
 cinst NuGet.CommandLine
 cinst paint.net
 cinst PDFCreator
