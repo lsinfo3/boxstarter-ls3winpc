@@ -25,6 +25,7 @@ cinst NuGet.CommandLine
 cinst paint.net
 cinst PDFCreator
 cinst poshgit
+cinst putty
 cinst skype
 cinst sysinternals
 cinst vlc
