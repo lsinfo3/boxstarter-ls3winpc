@@ -1,10 +1,21 @@
+# Boxstarter options
+$Boxstarter.RebootOk=$true # Allow reboots?
+$Boxstarter.NoPassword=$false # Is this a machine with no login password?
+$Boxstarter.AutoLogin=$true # Save my password securely and auto-login after a reboot
+
 try {
   
+Update-ExecutionPolicy Unrestricted
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowFileExtensions -EnableShowFullPathInTitleBar
 Set-StartScreenOptions -EnableBootToDesktop -EnableDesktopBackgroundOnStart -EnableShowStartOnActiveScreen -EnableShowAppsViewOnStartScreen -EnableSearchEverywhereInAppsView -EnableListDesktopAppsFirst
 Enable-RemoteDesktop		
+Set-TaskbarSmall
+
+if (Test-PendingReboot) { Invoke-Reboot }
+
 Install-WindowsUpdate -AcceptEula		
-Update-ExecutionPolicy Unrestricted
+
+if (Test-PendingReboot) { Invoke-Reboot }
 
 cinst 7zip
 cinst 7zip.install
