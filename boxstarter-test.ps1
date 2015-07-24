@@ -6,7 +6,7 @@ $Boxstarter.AutoLogin=$true # Save my password securely and auto-login after a r
 try {
 
 cinst powershell
-Invoke-Reboot
+if (Test-PendingReboot) { Invoke-Reboot }
   
 Update-ExecutionPolicy Unrestricted
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowFileExtensions -EnableShowFullPathInTitleBar
