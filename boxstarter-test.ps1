@@ -9,7 +9,7 @@ Update-ExecutionPolicy Unrestricted
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowFileExtensions -EnableShowFullPathInTitleBar
 Set-StartScreenOptions -EnableBootToDesktop -EnableDesktopBackgroundOnStart -EnableShowStartOnActiveScreen -EnableShowAppsViewOnStartScreen -EnableSearchEverywhereInAppsView -EnableListDesktopAppsFirst
 Enable-RemoteDesktop		
-Set-TaskbarSmall
+Set-TaskbarOptions -Size Small
 
 if (Test-PendingReboot) { Invoke-Reboot }
 
