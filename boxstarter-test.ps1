@@ -42,7 +42,8 @@ cinst skype
 cinst sysinternals
 cinst vlc
 cinst Wget
-
+cinst vagrant
+cinst virtualbox
 
 # create HWP user
 $username = "hwp"
