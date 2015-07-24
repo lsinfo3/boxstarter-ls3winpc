@@ -3,8 +3,6 @@ $Boxstarter.RebootOk=$true # Allow reboots?
 $Boxstarter.NoPassword=$false # Is this a machine with no login password?
 $Boxstarter.AutoLogin=$true # Save my password securely and auto-login after a reboot
 
-try {
-
 cinst powershell
 if (Test-PendingReboot) { Invoke-Reboot }
   
@@ -67,12 +65,3 @@ $wallpaperUrl = "https://gist.githubusercontent.com/StephenKing/eee9c8344d8e1ec7
 $wallpaperFile = "$env:USERPROFILE\i3-wallpaper-4k.png"
 Invoke-WebRequest $wallpaperUrl -OutFile $wallpaperFile
 Set-ItemProperty -path "HKCU:Control Panel\Desktop" -name wallpaper -value $wallpaperFile
-
-
-
-Write-ChocolateySuccess 'Setup finished'
-
-} catch {
-  Write-ChocolateyFailure 'Setup failed: ' $($_.Exception.Message)
-  throw
-}
