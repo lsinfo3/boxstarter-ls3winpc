@@ -44,16 +44,21 @@ cinst Wget
 
 
 # create HWP user
+$username = "hwp"
 $Computername = $env:COMPUTERNAME
-[ADSI]$server="WinNT://$Computername"
-$NewUser=$server.Create("User","hwp")
+$Server=[ADSI]"WinNT://$Computername"
+$NewUser=$Server.Create("User",$username)
 $NewUser.SetPassword("hwp")
+
 # flags see http://www.hofferle.com/modify-local-user-account-flags-with-powershell/
 $ADS_UF_PASSWD_CANT_CHANGE = 64     # 0x40
 $ADS_UF_DONT_EXPIRE_PASSWD = 65536  # 0x10000
 $NewUser.userflags.value = $newuser.UserFlags.value -BOR $ADS_UF_PASSWD_CANT_CHANGE
 $NewUser.userflags.value = $newuser.UserFlags.value -BOR $ADS_UF_DONT_EXPIRE_PASSWD
 $NewUser.SetInfo()
+# add user to the "Users" group
+$UsersGroup = [ADSI]"WinNT://$Computername/Users,group"
+$UsersGroup.Add($NewUser.path)
 
 Write-ChocolateySuccess 'Setup finished'
 
