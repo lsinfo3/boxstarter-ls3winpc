@@ -23,7 +23,7 @@ Set-ItemProperty -path "HKCU:Control Panel\Desktop" -name wallpaper -value $wall
 $intelHdGraphicsUrl = "http://downloadmirror.intel.com/25143/eng/win64_153623.exe"
 $intelHdGraphicsFile = "$env:USERPROFILE\Downloads\intel-hd-4600_win64_153623.exe"
 Invoke-WebRequest $intelHdGraphicsUrl -OutFile $intelHdGraphicsFile
-
+$intelHdGraphicsFile -s -A -s
 
 # Install-WindowsUpdate -AcceptEula		
 
