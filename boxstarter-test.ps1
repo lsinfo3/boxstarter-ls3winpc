@@ -67,10 +67,6 @@ $wallpaperFile = "$env:USERPROFILE\i3-wallpaper-4k.png"
 Invoke-WebRequest $wallpaperUrl -OutFile $wallpaperFile
 Set-ItemProperty -path "HKCU:Control Panel\Desktop" -name wallpaper -value $wallpaperFile
 
-$wallpaperUrl = "https://gist.githubusercontent.com/StephenKing/eee9c8344d8e1ec72ca0/raw/i3-wallpaper-4k.png"
-$wallpaperFile = "$env:USERPROFILE\i3-wallpaper-4k.png"
-Invoke-WebRequest $wallpaperUrl -OutFile $wallpaperFile
-
 $intelHdGraphicsUrl = "http://downloadmirror.intel.com/25143/eng/win64_153623.exe"
 $intelHdGraphicsFile = "$env:USERPROFILE\Downloads\intel-hd-4600_win64_153623.exe"
 Invoke-WebRequest $intelHdGraphicsUrl -OutFile $intelHdGraphicsFile
