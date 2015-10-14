@@ -27,7 +27,7 @@ Invoke-WebRequest $intelHdGraphicsUrl -OutFile $intelHdGraphicsFile
 
 # Install-WindowsUpdate -AcceptEula		
 
-if (Test-PendingReboot) { Invoke-Reboot }
+# if (Test-PendingReboot) { Invoke-Reboot }
 
 cinst 7zip
 cinst 7zip.install
