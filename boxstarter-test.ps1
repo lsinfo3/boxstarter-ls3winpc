@@ -70,5 +70,5 @@ $NewUser.userflags.value = $newuser.UserFlags.value -BOR $ADS_UF_PASSWD_CANT_CHA
 $NewUser.userflags.value = $newuser.UserFlags.value -BOR $ADS_UF_DONT_EXPIRE_PASSWD
 $NewUser.SetInfo()
 # add user to the "Users" group
-$UsersGroup = [ADSI]"WinNT://$Computername/Users,group"
+$UsersGroup = [adsi]"WinNT://$env:computername/Users,Group"
 $UsersGroup.Add($NewUser.path)
